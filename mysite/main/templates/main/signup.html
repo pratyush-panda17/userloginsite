@@ -1,0 +1,17 @@
+<html>
+    <title>Sign Up</title>
+    <body>
+        <form method ="post", action="/signup/">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type = "submit", name = "register">Register</button>
+        </form>
+        <button onclick="location.href = '/'">Home</button>
+        {% if usernameExists %}
+            <h3>Username is taken!</h3>
+        {% elif not confirmedPassword %}
+            <h3> Passwords do not match!</h3>
+        {% endif %}
+    </body>
+
+</html>

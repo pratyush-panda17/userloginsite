@@ -1,0 +1,15 @@
+<html>
+    <title>User Data</title>
+    <body>
+        {% if user.is_doctor %}
+            <h3>User Type: Doctor</h3>
+        {% else %}
+                <h3>User Type: Patient</h3>
+        {% endif %}
+        <h3>First Name: {{user.f_name}}</h3>
+        <h3>Lasrt Name: {{user.l_name}}</h3>
+        <h3>Username: {{user.username}}</h3>
+        <h3>Adress: {{user.address}}</h3>
+        <button onclick="location.href = '/'">Home</button>
+    </body>
+</html>
